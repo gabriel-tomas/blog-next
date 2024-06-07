@@ -1,10 +1,10 @@
 import { AppProps } from 'next/app';
-import Link from 'next/link';
+/* import Link from 'next/link'; */
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/global-styles';
 import { theme } from '../styles/theme';
 
-const ContainerExample = () => {
+/* const ContainerExample = () => {
   return (
     <ul>
       <li>
@@ -15,13 +15,13 @@ const ContainerExample = () => {
       </li>
     </ul>
   );
-};
+}; */
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
-      <ContainerExample />
+      {/* <ContainerExample /> */}
       <GlobalStyles />
     </ThemeProvider>
   );
