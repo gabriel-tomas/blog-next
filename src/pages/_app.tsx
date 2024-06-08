@@ -3,25 +3,13 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/global-styles';
 import { theme } from '../styles/theme';
-
-/* const ContainerExample = () => {
-  return (
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About Us</Link>
-      </li>
-    </ul>
-  );
-}; */
+import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <Component {...pageProps} />
-      {/* <ContainerExample /> */}
       <GlobalStyles />
     </ThemeProvider>
   );
