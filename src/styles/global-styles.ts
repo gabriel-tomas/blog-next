@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -22,4 +22,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-family: "Roboto", sans-serif
   }
+`;
+
+export const MainContainer = styled.main`
+  max-width: 960px;
+  margin-inline: auto;
 `;
