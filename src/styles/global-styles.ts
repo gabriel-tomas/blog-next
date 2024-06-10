@@ -22,10 +22,18 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-family: "Roboto", sans-serif
   }
+
+  body {
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 `;
 
 export const MainContainer = styled.main`
   max-width: 960px;
   margin-inline: auto;
   padding-inline: 1rem;
+  margin-bottom: 3rem;
 `;
