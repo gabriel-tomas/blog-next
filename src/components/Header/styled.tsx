@@ -11,5 +11,9 @@ export const ContainerHeader = styled.header`
     font-size: ${({ theme }) => theme.fontSizes.base};
     font-weight: 500;
     letter-spacing: 0.1rem;
+
+    h1 {
+      font-size: inherit;
+    }
   }
 `;

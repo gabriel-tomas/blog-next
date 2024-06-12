@@ -11,11 +11,14 @@ export type PostPageProps = {
 export default function PostPage({ post }: PostPageProps) {
   return (
     <ContainerPostPage>
-      <div className="container-main-content">
+      <header>
         <h2>{post.attributes.title}</h2>
-        <div className="container-content">
-          <BlocksRenderer content={post.attributes.content} />
-        </div>
+      </header>
+      <div className="container-post-cover">
+        <img src={post.attributes.cover.data.attributes.formats.large.url} alt={post.attributes.title} />
+      </div>
+      <div className="container-main-content">
+        <BlocksRenderer content={post.attributes.content} />
       </div>
     </ContainerPostPage>
   );
