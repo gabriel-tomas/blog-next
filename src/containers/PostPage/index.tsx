@@ -33,7 +33,7 @@ export default function PostPage({ post }: PostPageProps) {
         <DiscussionEmbed
           shortname="blog-next-9"
           config={{
-            url: `/post/${post.attributes.slug}`,
+            url: `${process.env.NEXT_PUBLIC_APP_URL}/post/${post.attributes.slug}`,
             identifier: post.attributes.slug,
             title: post.attributes.title,
             language: 'pt_BR',
