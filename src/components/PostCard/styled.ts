@@ -2,11 +2,12 @@ import { styled } from 'styled-components';
 
 export const ContainerPostCard = styled.div`
   .container-img {
-    height: 100%;
+    display: block;
+    width: 100%;
 
     img {
+      height: 100%;
       width: 100%;
-      max-height: 300px;
       object-fit: cover;
       border-radius: 0.3rem;
     }
