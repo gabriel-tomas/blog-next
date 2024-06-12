@@ -35,5 +35,6 @@ export const MainContainer = styled.main`
   max-width: 960px;
   margin-inline: auto;
   padding-inline: 1rem;
+  margin-top: 2rem;
   margin-bottom: 3rem;
 `;

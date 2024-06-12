@@ -1,3 +1,5 @@
+import { type BlocksContent } from '@strapi/blocks-react-renderer';
+
 export interface PostRoot {
   id: number;
   attributes: PostAttributes;
@@ -5,7 +7,7 @@ export interface PostRoot {
 
 export interface PostAttributes {
   title: string;
-  content: Content[];
+  content: BlocksContent;
   slug: string;
   createdAt: string;
   updatedAt: string;
@@ -15,7 +17,7 @@ export interface PostAttributes {
   category: Category;
 }
 
-export interface Content {
+/* export interface Content {
   type: string;
   level?: number;
   children: Children[];
@@ -24,7 +26,7 @@ export interface Content {
 export interface Children {
   text: string;
   type: string;
-}
+} */
 
 export interface Cover {
   data: Data;

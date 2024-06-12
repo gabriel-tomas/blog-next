@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import ContainerPostPage from '../../containers/PostPage';
+
+import PostPage from '../../containers/PostPage';
 
 import { getPosts } from '../../data/posts/get-all';
 import { countAllPosts } from '../../data/posts/count-all';
@@ -11,8 +12,7 @@ export type PostProps = {
 };
 
 export default function Post({ post }: PostProps) {
-  console.log(post);
-  return <ContainerPostPage />;
+  return <PostPage post={post} />;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
