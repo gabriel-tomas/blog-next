@@ -1,4 +1,5 @@
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import { DiscussionEmbed } from 'disqus-react';
 
 import { PostRoot } from '../../domain/posts/post-protocol';
 
@@ -27,6 +28,17 @@ export default function PostPage({ post }: PostPageProps) {
       </div>
       <div className="container-main-content">
         <BlocksRenderer content={post.attributes.content} />
+      </div>
+      <div className="container-comments">
+        <DiscussionEmbed
+          shortname="blog-next-9"
+          config={{
+            url: `/post/${post.attributes.slug}`,
+            identifier: post.attributes.slug,
+            title: post.attributes.title,
+            language: 'pt_BR',
+          }}
+        />
       </div>
     </ContainerPostPage>
   );

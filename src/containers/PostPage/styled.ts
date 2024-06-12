@@ -45,4 +45,8 @@ export const ContainerPostPage = styled.section`
       }
     `}
   }
+
+  .container-comments {
+    margin-top: 3.6rem;
+  }
 `;
