@@ -10,9 +10,9 @@ export const theme: DefaultTheme = {
     white: '#fff',
   },
   fontSizes: {
-    sm: 'clamp(0.8rem, 0.08vi + 0.78rem, 0.84rem)',
-    base: 'clamp(1rem, 0.23vi + 0.94rem, 1.13rem)',
-    md: 'clamp(1.25rem, 0.45vi + 1.14rem, 1.5rem)',
-    lg: 'clamp(1.56rem, 0.79vi + 1.36rem, 2rem)',
+    sm: 'clamp(0.91rem, -0.04vi + 0.92rem, 0.89rem)',
+    base: 'clamp(1rem, 0.11vi + 0.97rem, 1.06rem)',
+    md: 'clamp(1.1rem, 0.32vi + 1.02rem, 1.27rem)',
+    lg: 'clamp(1.21rem, 0.58vi + 1.06rem, 1.53rem)',
   },
 };

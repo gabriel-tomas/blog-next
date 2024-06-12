@@ -9,10 +9,16 @@ export const ContainerPostPage = styled.section`
   }
 
   .container-post-cover {
-    margin-bottom: 2rem;
-
     img {
       width: 100%;
+    }
+  }
+
+  .container-post-details {
+    margin-bottom: 1.6rem;
+
+    & > span {
+      font-size: ${({ theme }) => theme.fontSizes.sm};
     }
   }
 
