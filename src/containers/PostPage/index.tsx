@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -14,6 +15,11 @@ export type PostPageProps = {
 export default function PostPage({ post }: PostPageProps) {
   return (
     <ContainerPostPage>
+      <Head>
+        <title>
+          {post.attributes.title} | {post.attributes.author.data.attributes.name} | Blog Next
+        </title>
+      </Head>
       <header>
         <h2>{post.attributes.title}</h2>
       </header>
