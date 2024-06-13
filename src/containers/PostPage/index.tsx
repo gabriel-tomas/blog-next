@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import { DiscussionEmbed } from 'disqus-react';
 
@@ -29,7 +30,10 @@ export default function PostPage({ post }: PostPageProps) {
       <div className="container-post-details">
         <span>
           Publicado por {post.attributes.author.data.attributes.name} em{' '}
-          {formatDate(post.attributes.createdAt)} | categoria: {post.attributes.category.data.attributes.name}
+          {formatDate(post.attributes.createdAt)} | categoria:{' '}
+          <Link href={`/category/${post.attributes.category.data.attributes.name}`}>
+            {post.attributes.category.data.attributes.name}
+          </Link>
         </span>
       </div>
       <div className="container-main-content">

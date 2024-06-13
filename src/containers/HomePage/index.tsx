@@ -5,11 +5,13 @@ import { Container } from './styled';
 
 export type HomePageProps = {
   posts: PostRoot[];
+  name?: string;
 };
 
-export default function Homepage({ posts }: HomePageProps) {
+export default function Homepage({ posts, name }: HomePageProps) {
   return (
     <Container>
+      {name && <span>Categoria: {name}</span>}
       <ul>
         {posts.map((post) => (
           <PostCard key={post.id} post={post} />
