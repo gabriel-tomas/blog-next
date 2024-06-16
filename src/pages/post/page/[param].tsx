@@ -28,7 +28,7 @@ export default function Page({ posts, pagination }: PageProps) {
 
   return (
     <>
-      <HomePage posts={posts} />
+      <HomePage posts={posts} dontShowAllPostsLink />
       <Pagination {...pagination} />
     </>
   );
@@ -46,9 +46,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   const pageNumber = (Array.isArray(param) ? Number(param[0]) : Number(param)) - 1;
 
-  console.log(pageNumber);
-
-  const postsPerPage = 2;
+  const postsPerPage = 4;
 
   const postsCount = await countAllPosts();
 

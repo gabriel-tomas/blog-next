@@ -20,7 +20,7 @@ export default function Post({ post }: PostProps) {
     return <h1>Carregando...</h1>;
   }
 
-  if (!post) {
+  if (!post?.attributes?.title) {
     return <Error statusCode={404} />;
   }
 
@@ -38,7 +38,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const post = await getOnePost(context.params.slug);
+  let post: PostRoot | object = await getOnePost(context.params.slug);
+
+  post = post || {};
 
   return {
     props: { post },

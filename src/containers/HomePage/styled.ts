@@ -17,4 +17,10 @@ export const Container = styled.section`
       list-style: none;
     }
   }
+
+  & > a {
+    display: block;
+    margin-block: 2rem;
+    text-align: center;
+  }
 `;
